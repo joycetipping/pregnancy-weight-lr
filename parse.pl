@@ -2,7 +2,7 @@ use strict; use warnings;
 use Date::Parse;
 
 open(my $fh, '<', 'weights.csv') || die 'cannot open';
-my $weight_list = "day,weight\n";
+my $weight_list = "";
 while (my $line = <$fh>) {
   chomp $line;
   my ($date, $weight) = split(/,/, $line);
